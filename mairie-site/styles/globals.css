@@ -1,30 +1,38 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* === Couleurs campagne normande === */
+:root {
+  --bg-header: #dbe5d1; /* vert sauge */
+  --text-header: #4b5563; /* gris pierre */
+  --hover-link: #a3c4dc; /* bleu ciel */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* === Header === */
+.header {
+  background-color: var(--bg-header);
+  color: var(--text-header);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.header-container {
+  @apply max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4;
 }
+
+.header-title {
+  @apply text-2xl font-bold tracking-wide;
+}
+
+.header-nav {
+  @apply flex flex-wrap gap-4 text-sm md:text-base;
+}
+
+.header-link {
+  @apply transition;
+}
+
+.header-link:hover {
+  color: var(--hover-link);
+}
+

@@ -1,33 +1,29 @@
-// components/Header.tsx
 import { useState } from 'react';
-
 import Link from 'next/link';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-blue-800 text-white p-4 flex justify-between items-center">
-      <h1 className="text-lg font-bold">Terroir de Caux</h1>
-      <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
-        ☰
-      </button>
+    <header className="header">
+      <div className="header-container">
+        <h1 className="header-title">🌾 Terre de caux</h1>
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[#4b5563]">
+          ☰
+        </button>
+      </div>
 
-      <nav className={`absolute top-16 left-0 w-full bg-blue-700 p-4 ${isOpen ? 'block' : 'hidden'} md:hidden`}>
-        <ul className="space-y-2">
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/faq">FAQ</Link></li>
-          <li><Link href="/sivos">SIVOS</Link></li>
-          <li><Link href="/agenda">Agenda</Link></li>
-        </ul>
-      </nav>
-
-      <nav className="hidden md:flex space-x-4">
-        <Link href="/services">Services</Link>
-        <Link href="/faq">FAQ</Link>
-        <Link href="/sivos">SIVOS</Link>
-        <Link href="/agenda">Agenda</Link>
-      </nav>
+      {/* Menu mobile */}
+      {isOpen && (
+        <nav className="header-nav">
+          <ul className="flex flex-col">
+            <li><Link href="/services" className="header-link">Services</Link></li>
+            <li><Link href="/faq" className="header-link">FAQ</Link></li>
+            <li><Link href="/sivos" className="header-link">SIVOS</Link></li>
+            <li><Link href="/agenda" className="header-link">Agenda</Link></li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }

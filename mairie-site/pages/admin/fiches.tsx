@@ -1,4 +1,3 @@
-// pages/admin/fiches.tsx
 import { useState, useEffect } from 'react';
 
 export default function AdminFiches() {
