@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header className="bg-blue-800 text-white p-4 flex justify-between items-center">
-      <h1 className="text-lg font-bold">Mairie</h1>
+      <h1 className="text-lg font-bold">Terroir de Caux</h1>
       <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
         ☰
       </button>
@@ -16,7 +16,7 @@ export default function Header() {
         <ul className="space-y-2">
           <li><Link href="/services">Services</Link></li>
           <li><Link href="/faq">FAQ</Link></li>
-          <li><Link href="/sivos">SIVOS</Link></li>
+          <li><Link href="/sivos/sivos">SIVOS</Link></li>
           <li><Link href="/agenda">Agenda</Link></li>
         </ul>
       </nav>
@@ -24,7 +24,7 @@ export default function Header() {
       <nav className="hidden md:flex space-x-4">
         <Link href="/services">Services</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/sivos">SIVOS</Link>
+        <Link href="/sivos/sivos">SIVOS</Link>
         <Link href="/agenda">Agenda</Link>
       </nav>
     </header>
