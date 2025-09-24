@@ -1,5 +1,6 @@
 // components/Header.tsx
 import { useState } from 'react';
+
 import Link from 'next/link';
 
 export default function Header() {
@@ -16,7 +17,7 @@ export default function Header() {
         <ul className="space-y-2">
           <li><Link href="/services">Services</Link></li>
           <li><Link href="/faq">FAQ</Link></li>
-          <li><Link href="/sivos/sivos">SIVOS</Link></li>
+          <li><Link href="/sivos">SIVOS</Link></li>
           <li><Link href="/agenda">Agenda</Link></li>
         </ul>
       </nav>
@@ -24,7 +25,7 @@ export default function Header() {
       <nav className="hidden md:flex space-x-4">
         <Link href="/services">Services</Link>
         <Link href="/faq">FAQ</Link>
-        <Link href="/sivos/sivos">SIVOS</Link>
+        <Link href="/sivos">SIVOS</Link>
         <Link href="/agenda">Agenda</Link>
       </nav>
     </header>

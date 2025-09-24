@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import NewsCard from '../../components/NewsCard';
+import EventCard from '../../components/EventCard';
+
 
 export default function Royville() {
   return (
@@ -13,8 +14,8 @@ export default function Royville() {
         <section>
           <h2 className="text-xl font-semibold mb-2">Actualités</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <NewsCard title="Conseil Municipal du 15/09" summary="Compte rendu disponible." />
-            <NewsCard title="Travaux de voirie" summary="Début des travaux rue des écoles." />
+            <EventCard title="Conseil Municipal" date="15/09" location="salle des fêtes" description="Compte rendu disponible." />
+            <EventCard title="Travaux de voirie" date='20/09' location='rue des écoles' description='réhaussemment' />
           </div>
         </section>
 
