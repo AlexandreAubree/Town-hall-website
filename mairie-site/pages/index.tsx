@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import VillageCard from '../components/VillageCard';
@@ -7,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="p-6">
+      <main className="container mx-auto px-4 py-8">
         <h2 className="text-2xl font-semibold mb-4">Bienvenue dans la communauté de communes Terroir de Caux </h2>
         <p className="text-gray-700">Choisissez une commune ou explorez les services proposés.</p>
         <VillageCard name="Auzouville-sur-Sâane" image="/images/auzouville.jpg" href="/mairies/auzouville-sur-saane" />

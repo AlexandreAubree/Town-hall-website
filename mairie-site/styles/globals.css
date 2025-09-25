@@ -4,35 +4,231 @@
 
 /* === Couleurs campagne normande === */
 :root {
-  --bg-header: #dbe5d1; /* vert sauge */
-  --text-header: #4b5563; /* gris pierre */
-  --hover-link: #a3c4dc; /* bleu ciel */
+  --bg-header: #dbe5d1;
+  --text-header: #4b5563;
+  --hover-link: #a3c4dc;
 }
+
+/* === Styles personnalisés === */
+@layer base {
+  body {
+    background-color: #f5f3e7;
+    color: var(--text-header);
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
 
 /* === Header === */
 .header {
-  background-color: var(--bg-header);
-  color: var(--text-header);
+  background-color: #dbe5d1;
+  color: #4b5563;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
-  @apply max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+  }
 }
 
 .header-title {
-  @apply text-2xl font-bold tracking-wide;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #4b5563;
 }
 
-.header-nav {
-  @apply flex flex-wrap gap-4 text-sm md:text-base;
+/* === Navigation desktop === */
+.nav-desktop {
+  display: none;
 }
 
-.header-link {
-  @apply transition;
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
-.header-link:hover {
-  color: var(--hover-link);
+.nav-link {
+  font-size: 1rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
+.nav-link:hover {
+  color: #a3c4dc;
+}
+
+/* === Bouton burger mobile === */
+.burger-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #4b5563;
+  cursor: pointer;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+}
+
+/* === Burger pop-up === */
+.burger-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.burger-menu {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.burger-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.burger-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.burger-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.burger-link:hover {
+  color: #a3c4dc;
+}
+
+/* === Styles pour les cartes des villages === */
+  .village-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .village-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .village-card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+  .village-card-content {
+    padding: 1rem;
+  }
+  .village-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .village-card-link {
+    color: var(--text-header);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .village-card-link:hover {
+    color: var(--hover-link);
+  }
+
+  /* === Styles pour le pied de page === */
+  .footer {
+    background-color: var(--bg-header);
+    color: var(--text-header);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+  .footer-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .footer-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .footer-a {
+    color: var(--text-header);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .footer-a:hover {
+    color: var(--hover-link);
+  }
+  .footer-bottom {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+
+  @media (min-width: 768px) {
+    .footer {
+      font-size: 1rem;
+    }
+  }
+}
