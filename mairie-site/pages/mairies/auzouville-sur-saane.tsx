@@ -18,6 +18,13 @@ export default function AuzouvilleSurSaane() {
       location: 'Rue des écoles',
       description: 'Réhaussement en cours.',
     },
+    {
+      title: 'Fête du village',
+      image: '/fete_village.jpg',
+      date: '05/10',
+      location: 'Place centrale',
+      description: 'Animations et repas partagé.',
+    },
   ];
 
   return (
@@ -32,11 +39,13 @@ export default function AuzouvilleSurSaane() {
           <EventCarousel events={events} />
         </section>
 
+        <h2>Mairie</h2>
+
         {/* === Image mairie === */}
         <img
           src="/mairie_auzouville_sur_saane.jpg"
           alt="Photo de la mairie de Auzouville-sur-Sâane"
-          className="village-image"
+          className="image"
         />
 
         {/* === Infos utiles === */}

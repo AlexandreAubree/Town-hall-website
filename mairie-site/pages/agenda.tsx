@@ -12,7 +12,12 @@ export default function Agenda() {
     <>
       <Header />
       <main className="page">
-        <h1 className="text-2xl font-bold">Agenda</h1>
+        <h1>Agenda</h1>
+        <img
+          src="/agenda.jpg"
+          alt="photo d'un agenda noir sur table en bois"
+          className="image"
+        />
         <div className="space-y-4">
           {events.map((event, index) => (
             <AgendaCard key={index} {...event} />

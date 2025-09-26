@@ -1,30 +1,60 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import EventCard from '../../components/EventCard';
-
+import EventCarousel from '../../components/EventCarousel';
 
 export default function Lestanville() {
+  const events = [
+    {
+      title: 'Conseil Municipal',
+      image: '/CM.jpg',
+      date: '15/09',
+      location: 'Salle des fêtes',
+      description: 'Compte rendu disponible.',
+    },
+    {
+      title: 'Travaux de voirie',
+      image: '/OIP.jpg',
+      date: '20/09',
+      location: 'Rue des écoles',
+      description: 'Réhaussement en cours.',
+    },
+    {
+      title: 'Fête du village',
+      image: '/fete_village.jpg',
+      date: '05/10',
+      location: 'Place centrale',
+      description: 'Animations et repas partagé.',
+    },
+  ];
+
   return (
     <>
       <Header />
-      <main className="p-6 space-y-6">
-        <h1 className="text-2xl font-bold">Lestanville</h1>
-        <img src="/images/royville.jpg" alt="Royville" className="w-full h-48 object-cover rounded" />
-        
+      <main className="village-page">
+        <h1 className="village-title">Lestanville</h1>
+
+        {/* === Carrousel des événements === */}
         <section>
-          <h2 className="text-xl font-semibold mb-2">Actualités</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <EventCard title="Conseil Municipal" date="15/09" location="salle des fêtes" description="Compte rendu disponible." />
-            <EventCard title="Travaux de voirie" date='20/09' location='rue des écoles' description='réhaussemment' />
-          </div>
+          <h2 className="section-title">Actualités</h2>
+          <EventCarousel events={events} />
         </section>
 
+        <h2>Mairie</h2>
+
+        {/* === Image mairie === */}
+        <img
+          src="/mairie_lestanville.jpg"
+          alt="Photo de la mairie de Lestanville"
+          className="image"
+        />
+
+        {/* === Infos utiles === */}
         <section>
-          <h2 className="text-xl font-semibold mb-2">Infos utiles</h2>
-          <ul className="list-disc pl-6 text-gray-700">
-            <li>Adresse mairie : 12 rue du centre</li>
-            <li>Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li>Contact : 02 35 XX XX XX</li>
+          <h2 className="section-title">Infos utiles</h2>
+          <ul className="info-list">
+            <li>📍 Adresse mairie : 12 rue du centre</li>
+            <li>🕒 Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
+            <li>📞 Contact : 02 35 XX XX XX</li>
           </ul>
         </section>
       </main>

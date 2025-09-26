@@ -871,15 +871,29 @@ body {
   text-align: center;
 }
 
-/* === Image mairie sans bordure ni effet === */
+/* === Image sans bordure ni effet === */
 
-.village-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+.image {
+  width: 320px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .image {
+    width: 450px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image {
+    width: 800px;
+    height: 450px;
+    padding: 1rem 1rem;
+  }
 }
 
 /* === Section titres === */
