@@ -6,14 +6,14 @@ export default function AuzouvilleSurSaane() {
   const events = [
     {
       title: 'Conseil Municipal',
-      image: '/event_conseil.jpg',
+      image: '/CM.jpg',
       date: '15/09',
       location: 'Salle des fêtes',
       description: 'Compte rendu disponible.',
     },
     {
       title: 'Travaux de voirie',
-      image: '/event_travaux.jpg',
+      image: '/OIP.jpg',
       date: '20/09',
       location: 'Rue des écoles',
       description: 'Réhaussement en cours.',

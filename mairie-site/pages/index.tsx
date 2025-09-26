@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <>
       <Header />
-     <main className="index-main-container">
-       <h2 className="main-h2">Bienvenue dans la communauté de communes Terroir de Caux</h2>
-       <p className="text-gray-700">Choisissez une commune ou explorez les services proposés.</p>
+     <main className="page">
+       <h2>Bienvenue dans la communauté de communes Terroir de Caux</h2>
+       <p>Choisissez une commune ou explorez les services proposés.</p>
 
       <div className="village-grid">
         <VillageCard name="Auzouville-sur-Sâane" image="/auzouville_sur_saane.jpg" href="/mairies/auzouville-sur-saane" />
