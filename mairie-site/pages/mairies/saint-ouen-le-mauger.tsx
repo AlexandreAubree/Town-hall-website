@@ -30,8 +30,8 @@ export default function SaintOuenLeMauger() {
   return (
     <>
       <Header />
-      <main className="village-page">
-        <h1 className="village-title">Saint-Ouen le Mauger</h1>
+      <main className="sub-page">
+        <h1 className="sub-title">Saint-Ouen le Mauger</h1>
 
         {/* === Carrousel des événements === */}
         <section>

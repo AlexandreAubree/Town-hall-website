@@ -12,10 +12,9 @@ export default function Header() {
 
           {/* Navigation visible uniquement à partir du format tablette */}
           <nav className="nav-desktop">
-            <Link href="/services" className="nav-link">Services</Link>
-            <Link href="/faq" className="nav-link">FAQ</Link>
-            <Link href="/sivos" className="nav-link">SIVOS</Link>
             <Link href="/agenda" className="nav-link">Agenda</Link>
+            <Link href="/sivos" className="nav-link">SIVOS</Link>
+            <Link href="/services" className="nav-link">Services</Link>
           </nav>
 
           {/* Bouton burger visible uniquement sur mobile */}
@@ -30,7 +29,6 @@ export default function Header() {
             <button className="burger-close" onClick={() => setIsOpen(false)}>✕</button>
             <ul className="burger-list">
               <li><Link href="/services" className="burger-link">Services</Link></li>
-              <li><Link href="/faq" className="burger-link">FAQ</Link></li>
               <li><Link href="/sivos" className="burger-link">SIVOS</Link></li>
               <li><Link href="/agenda" className="burger-link">Agenda</Link></li>
             </ul>

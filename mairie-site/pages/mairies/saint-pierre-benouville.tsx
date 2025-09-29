@@ -30,8 +30,8 @@ export default function SaintPierreBenouville() {
   return (
     <>
       <Header />
-      <main className="village-page">
-        <h1 className="village-title">Saint-Pierre Bénouville</h1>
+      <main className="sub-page">
+        <h1 className="sub-title">Saint-Pierre Bénouville</h1>
 
         {/* === Carrousel des événements === */}
         <section>

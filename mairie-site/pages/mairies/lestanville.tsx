@@ -30,8 +30,8 @@ export default function Lestanville() {
   return (
     <>
       <Header />
-      <main className="village-page">
-        <h1 className="village-title">Lestanville</h1>
+      <main className="sub-page">
+        <h1 className="sub-title">Lestanville</h1>
 
         {/* === Carrousel des événements === */}
         <section>

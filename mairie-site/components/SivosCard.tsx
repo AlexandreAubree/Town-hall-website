@@ -4,7 +4,7 @@ type Props = {
   href: string;
 };
 
-export default function VillageCard({ name, image, href }: Props) {
+export default function SivosCard({ name, image, href }: Props) {
   return (
     <a href={href} className="card">
       <img src={image} alt={`Photo de ${name}`} className="card-img" />

@@ -30,8 +30,8 @@ export default function AuzouvilleSurSaane() {
   return (
     <>
       <Header />
-      <main className="village-page">
-        <h1 className="village-title">Auzouville-sur-Sâane</h1>
+      <main className="sub-page">
+        <h1 className="sub-title">Auzouville-sur-Sâane</h1>
 
         {/* === Carrousel des événements === */}
         <section>

@@ -30,8 +30,8 @@ export default function Royville() {
   return (
     <>
       <Header />
-      <main className="village-page">
-        <h1 className="village-title">Royville</h1>
+      <main className="sub-page">
+        <h1 className="sub-title">Royville</h1>
 
         {/* === Carrousel des événements === */}
         <section>

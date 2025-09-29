@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <>
       <Header />
-      <main className="page">
+      <main className="main-page">
         <h1 className="page-title">Services municipaux</h1>
         <ul className="service-list">
           {services.map((service, index) => (
