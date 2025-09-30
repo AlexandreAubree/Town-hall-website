@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mairie de la commune – Agenda, informations et services",
+  title: "Mairie de la commune – Agenda, informations et services",// ← à adapter
   description:
-    "Retrouvez les événements, actualités et services proposés par la mairie. Agenda communal, écoles, démarches administratives et plus.",
+    "Retrouvez les événements, actualités et services proposés par les mairies. Agenda communal, écoles, démarches administratives et plus.",
   metadataBase: new URL("https://mairie-ton-site.fr"), // ← à adapter
   openGraph: {
-    title: "Mairie de la commune",
+    title: "Mairie de la commune",// ← à adapter
     description:
       "Découvrez les événements et services proposés par votre mairie.",
-    url: "https://mairie-ton-site.fr",
-    siteName: "Mairie de la commune",
+    url: "https://mairie-ton-site.fr",// ← à adapter
+    siteName: "Mairie de la commune",// ← à adapter
     images: [
       {
         url: "https://mairie-ton-site.fr/og-image.jpg", // ← à adapter
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mairie de la commune",
+    title: "Mairie de la commune",// ← à adapter
     description:
       "Agenda communal, informations pratiques et services publics.",
     images: ["https://mairie-ton-site.fr/og-image.jpg"], // ← à adapter
