@@ -1,32 +1,37 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [Email, setIdentifier] = useState('');
+  const [Password, setPassword] = useState('');
+  const router = useRouter();
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: any) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:1337/api/auth/local', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/local`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ identifier: email, password }),
+      body: JSON.stringify({
+         identifier: Email,
+         password: Password
+         }),
     });
+
     const data = await res.json();
     if (data.jwt) {
-      localStorage.setItem('strapi_jwt', data.jwt);
-      alert('Connecté !');
-      window.location.href = '/admin';
+      localStorage.setItem('token', data.jwt);
+      router.push('/admin/agenda');
     } else {
-      alert('Erreur de connexion');
+      alert('Échec de connexion');
     }
   };
 
   return (
-    <form onSubmit={handleLogin} className="p-6 max-w-md mx-auto">
-      <h2 className="text-xl font-bold mb-4">Connexion admin</h2>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="border p-2 w-full mb-2" />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" className="border p-2 w-full mb-4" />
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Se connecter</button>
+    <form onSubmit={handleLogin}>
+      <h2>Connexion</h2>
+      <input type="email" value={Email} onChange={e => setIdentifier(e.target.value)} placeholder="Email" />
+      <input type="password" value={Password} onChange={e => setPassword(e.target.value)} placeholder="Mot de passe" />
+      <button type="submit">Se connecter</button>
     </form>
   );
 }
