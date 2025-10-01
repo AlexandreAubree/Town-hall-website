@@ -1,14 +1,9 @@
 import { useRef } from 'react';
+import { EventType } from './types';  
 import EventCard from './EventCard';
 
 type Props = {
-  events: {
-    title: string;
-    image: string;
-    date: string;
-    location: string;
-    description: string;
-  }[];
+  events: EventType[];
 };
 
 export default function EventCarousel({ events }: Props) {

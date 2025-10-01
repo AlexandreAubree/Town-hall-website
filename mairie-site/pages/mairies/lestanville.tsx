@@ -55,6 +55,7 @@ export default function Lestanville() {
             <li>📍 Adresse mairie : 12 rue du centre</li>
             <li>🕒 Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
             <li>📞 Contact : 02 35 XX XX XX</li>
+            <li>📧 Email : </li>
           </ul>
         </section>
       </main>

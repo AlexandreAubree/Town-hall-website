@@ -1,36 +1,37 @@
 import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { AgendaType } from '../components/types';
 import AgendaCard from '../components/AgendaCard';
 
-// Définir le type pour les données d'agenda
-interface AgendaCardData {
-  id: number;
-  attributes: {
-    name: string;
-    location: string;
-    date: string;
-    time: string;
-    image?: {
-      data?: {
-        attributes?: {
-          url?: string;
-        };
-      };
-    };
-  };
-}
-
 export default function Agenda() {
-  const [agendas, setAgendas] = useState<AgendaCardData[]>([]);
+  const [agendas, setAgendas] = useState<AgendaType[]>([]);
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
-    fetch(`${API_URL}/api/agenda-cards?populate=image`)
+    fetch(`${API_URL}/api/agenda-cards?populate=*`)
       .then(res => res.json())
       .then(data => {
-        console.log('Réponse Strapi :', data.data);
-        setAgendas(data.data || []);
+        console.log('Réponse Strapi complète :', JSON.stringify(data, null, 2));
+
+        const validAgendas = (data.data || []).map((item: any) => {
+          if (!item || !item.id || !item.title || !item.date || !item.time || !item.location) return null;
+
+          const imageUrl = item.image?.url
+            ? `${API_URL}${item.image.url}`
+            : '/placeholder.jpg';
+
+          return {
+            title: item.title,
+            image: imageUrl,
+            date: item.date,
+            time: item.time,
+            location: item.location,
+            href: `/agenda/${item.id}`,
+          };
+        }).filter(Boolean); // retire les null
+
+        setAgendas(validAgendas);
       })
       .catch((err) => {
         console.error('Erreur de chargement des agendas :', err);
@@ -48,29 +49,19 @@ export default function Agenda() {
           alt="photo d'un agenda noir sur table en bois"
           className="image"
         />
-        {/* 🔁 Grille dynamique depuis Strapi */}
         <div className="grid">
-          {Array.isArray(agendas) && agendas.length > 0 ? (
-            agendas.map((agenda) => {
-              if (!agenda || !agenda.attributes) return null;
-
-              const { name, location, date, time, image } = agenda.attributes;
-              const imageUrl = image?.data?.attributes?.url
-                ? `http://localhost:1337${image.data.attributes.url}`
-                : '/placeholder.jpg';
-
-              return (
-                <AgendaCard
-                  key={agenda.id}
-                  title={name}
-                  image={imageUrl}
-                  location={location}
-                  date={date}
-                  time={time}
-                  href={`/agenda/${agenda.id}`} // ← lien vers la page détaillée
-                />
-              );
-            })
+          {agendas.length > 0 ? (
+            agendas.map((agenda, index) => (
+              <AgendaCard
+                key={index}
+                title={agenda.title}
+                image={agenda.image}
+                location={agenda.location}
+                date={agenda.date}
+                time={agenda.time}
+                href={agenda.href}
+              />
+            ))
           ) : (
             <p>Aucun événement disponible pour le moment.</p>
           )}

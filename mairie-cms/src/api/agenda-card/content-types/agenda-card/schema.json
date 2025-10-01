@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "evenements",
+  "collectionName": "agenda_cards",
   "info": {
-    "singularName": "evenement",
-    "pluralName": "evenements",
-    "displayName": "Event"
+    "singularName": "agenda-card",
+    "pluralName": "agenda-cards",
+    "displayName": "Agenda"
   },
   "options": {
     "draftAndPublish": true
@@ -12,15 +12,6 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "blocks"
-    },
-    "date": {
-      "type": "datetime"
-    },
-    "location": {
       "type": "string"
     },
     "image": {
@@ -33,8 +24,14 @@
         "audios"
       ]
     },
-    "visible": {
-      "type": "boolean"
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    },
+    "location": {
+      "type": "string"
     }
   }
 }

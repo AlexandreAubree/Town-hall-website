@@ -1,10 +1,6 @@
-type Props = {
-  title: string;
-  image: string;
-  date: string;
-  location: string;
-  description: string;
-};
+import { EventType } from './types';
+
+type Props = EventType;
 
 export default function EventCard({ title, image, date, location, description }: Props) {
   return (

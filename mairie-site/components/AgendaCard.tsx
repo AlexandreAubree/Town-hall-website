@@ -1,16 +1,11 @@
 import Link from 'next/link';
+import { AgendaType } from './types';
 import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 
-type Props = {
-  title: string;
-  image: string;
-  date: string;
-  time: string;
-  location: string;
-  href?: string; // lien vers la page détaillée
-};
+type Props = AgendaType;
 
 export default function AgendaCard({ title, image, date, time, location, href }: Props) {
+  console.log('AgendaCard rendu', title);
   return (
     <div className="event-card">
       <h3>{title}</h3>
