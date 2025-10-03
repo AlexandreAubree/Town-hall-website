@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SeoHead from '../components/SeoHead';
 
 export default function Services() {
   const services = [
@@ -10,6 +11,10 @@ export default function Services() {
 
   return (
     <>
+      <SeoHead
+        title="Services municipaux"
+        description="Informations sur les services municipaux : urbanisme, état civil, bibliothèques, musées."
+      />
       <Header />
       <main className="main-page">
         <h1 className="page-title">Services municipaux</h1>

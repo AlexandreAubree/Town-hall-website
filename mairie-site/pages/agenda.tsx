@@ -42,7 +42,11 @@ export default function Agenda() {
 
   return (
     <>
-      <SeoHead />
+      <SeoHead 
+      title="Agenda des 5 villages"
+      description="Consultez les événements à venir dans les 5 villages : Royville, Lestanville, Auzouville-sur-Sâane, Saint-Ouen le Mauger et Saint-Pierre Bénouville."
+       />
+
       <Header />
       <main className="main-page">
         <h1>Agenda</h1>

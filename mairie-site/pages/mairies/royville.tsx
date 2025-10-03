@@ -1,34 +1,52 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SeoHead from '../../components/SeoHead';
+import { EventType } from '../../components/types';
+import { useEffect, useState } from 'react';
+import TownMapClient from '../../components/TownMapClient';
 import EventCarousel from '../../components/EventCarousel';
+import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneSquare } from 'react-icons/fa';
 
 export default function Royville() {
-  const events = [
-    {
-      title: 'Conseil Municipal',
-      image: '/CM.jpg',
-      date: '15/09',
-      location: 'Salle des fêtes',
-      description: 'Compte rendu disponible.',
-    },
-    {
-      title: 'Travaux de voirie',
-      image: '/OIP.jpg',
-      date: '20/09',
-      location: 'Rue des écoles',
-      description: 'Réhaussement en cours.',
-    },
-    {
-      title: 'Fête du village',
-      image: '/fete_village.jpg',
-      date: '05/10',
-      location: 'Place centrale',
-      description: 'Animations et repas partagé.',
-    },
-  ];
 
+  const [events, setEvents] = useState<EventType[]>([]);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+  useEffect(() => {
+    fetch(`${API_URL}/api/actu-mairies?populate=*`)
+      .then(res => res.json())
+      .then(data => {
+        console.log('Réponse Strapi complète :', JSON.stringify(data, null, 2));
+
+        const validEvents = (data.data || []).map((item: any) => {
+          if (!item || !item.id || !item.title || !item.date || !item.description || !item.location) return null;
+
+          const imageUrl = item.image?.url
+            ? `${API_URL}${item.image.url}`
+            : '/placeholder.jpg';
+
+          return {
+            title: item.title,
+            image: imageUrl,
+            date: item.date,
+            location: item.location,
+            description: item.description
+          };
+        }).filter(Boolean); // retire les null
+
+        setEvents(validEvents);
+      })
+      .catch((err) => {
+        console.error('Erreur de chargement des actus :', err);
+        setEvents([]);
+      });
+  }, []);
   return (
     <>
+      <SeoHead
+        title="Mairie de Royville"
+        description="Informations et actualités de la mairie de Royville."
+      />
       <Header />
       <main className="sub-page">
         <h1 className="sub-title">Royville</h1>
@@ -52,14 +70,29 @@ export default function Royville() {
         <section>
           <h2 className="section-title">Infos utiles</h2>
           <ul className="info-list">
-            <li>📍 Adresse mairie : 12 rue du centre</li>
-            <li>🕒 Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li>📞 Contact : 02 35 XX XX XX</li>
-            <li>📧 Email : </li>
+            <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+            <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
+            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
           </ul>
+        </section>
+        <section>
+          <h3 className="section-title">Localisation</h3>
+          <TownMapClient
+            name="Mairie de Royville"
+            address="12 rue du centre"
+            position={[49.5000, 0.8000]}
+          />
         </section>
       </main>
       <Footer />
     </>
   );
 }
+
+
+
+
+
+
+
+

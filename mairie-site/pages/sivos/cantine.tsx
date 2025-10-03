@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SeoHead from '../../components/SeoHead';
 
 export default function Cantine() {
   const cantine = [
@@ -10,6 +11,10 @@ export default function Cantine() {
 
   return (
     <>
+      <SeoHead
+        title="Menus de la cantine scolaire"
+        description="Informations et menus de la cantine scolaire."
+      />
       <Header />
       <main className="main-page">
         <h1 className="page-title">Menus de la cantine scolaire</h1>

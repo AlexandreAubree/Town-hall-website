@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SeoHead from '../../components/SeoHead';
 
 export default function Documents() {
   const services = [
@@ -10,6 +11,10 @@ export default function Documents() {
 
   return (
     <>
+      <SeoHead
+        title="Documents scolaire"
+        description="Informations et documents scolaires."
+      />
       <Header />
       <main className="main-page">
         <h1 className="page-title">Documents scolaire</h1>

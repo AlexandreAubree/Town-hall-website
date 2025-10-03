@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import SeoHead from '../../components/SeoHead';
 import { EventType } from '../../components/types';
 import { useEffect, useState } from 'react';
 import EventCarousel from '../../components/EventCarousel';
@@ -41,6 +42,10 @@ export default function EcolePrimaire() {
   }, []);
   return (
     <>
+      <SeoHead
+        title="École primaire"
+        description="Informations et actualités des écoles primaire."
+      />
       <Header />
       <main className="sub-page">
         <h1 className="sub-title">École primaire</h1>

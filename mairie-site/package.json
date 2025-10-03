@@ -12,10 +12,12 @@
     "dev:css": "tailwindcss-cli -i styles/globals.css -o public/styles.css --watch"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

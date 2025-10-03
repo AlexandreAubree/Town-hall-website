@@ -8,7 +8,7 @@ export default function Header() {
     <>
       <header className="header">
         <div className="header-container">
-          <Link href="/" className="header-title">Terre de Caux</Link>
+          <Link href="/" className="header-title">Communauté des 5 villages</Link>
 
           {/* Navigation visible uniquement à partir du format tablette */}
           <nav className="nav-desktop">
