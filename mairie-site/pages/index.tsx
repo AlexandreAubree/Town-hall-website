@@ -1,10 +1,12 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SeoHead from '../components/SeoHead';
 import VillageCard from '../components/VillageCard';
 
 export default function Home() {
   return (
     <>
+      <SeoHead />
       <Header />
       <main className="main-page">
         {/* Section d’introduction avec header sémantique */}

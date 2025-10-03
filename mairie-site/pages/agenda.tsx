@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import SeoHead from '../components/SeoHead';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { AgendaType } from '../components/types';
@@ -41,6 +42,7 @@ export default function Agenda() {
 
   return (
     <>
+      <SeoHead />
       <Header />
       <main className="main-page">
         <h1>Agenda</h1>

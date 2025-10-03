@@ -14,9 +14,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "blocks"
-    },
     "date": {
       "type": "datetime"
     },
@@ -35,6 +32,9 @@
     },
     "visible": {
       "type": "boolean"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
