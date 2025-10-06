@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "evenements",
+  "collectionName": "actu_mairies",
   "info": {
-    "singularName": "evenement",
-    "pluralName": "evenements",
-    "displayName": "Actu-école"
+    "singularName": "actu-mairie",
+    "pluralName": "actu-mairies",
+    "displayName": "Actu-mairie"
   },
   "options": {
     "draftAndPublish": true
@@ -12,12 +12,6 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "date": {
-      "type": "datetime"
-    },
-    "location": {
       "type": "string"
     },
     "image": {
@@ -30,11 +24,17 @@
         "audios"
       ]
     },
-    "visible": {
-      "type": "boolean"
+    "date": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string"
     },
     "description": {
       "type": "text"
+    },
+    "visible": {
+      "type": "boolean"
     }
   }
 }

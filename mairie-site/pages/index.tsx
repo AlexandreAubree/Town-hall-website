@@ -21,7 +21,7 @@ export default function Home() {
         <section aria-labelledby="communes-title">
           <h2 id="communes-title">Nos communes</h2>
           <div className="grid">
-            <VillageCard name="Auzouville-sur-Sâane" image="/auzouville_sur_saane.jpg" href="/mairies/auzouville-sur-saane" />
+            <VillageCard name="Auzouville-sur-Saâne" image="/auzouville_sur_saane.jpg" href="/mairies/auzouville-sur-saane" />
             <VillageCard name="Lestanville" image="/lestanville.jpg" href="/mairies/lestanville" />
             <VillageCard name="Royville" image="/royville.jpeg" href="/mairies/royville" />
             <VillageCard name="Saint-Ouen-le-Mauger" image="/saint_ouen_le_mauger.jpg" href="/mairies/saint-ouen-le-mauger" />

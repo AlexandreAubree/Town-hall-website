@@ -7,11 +7,11 @@ type Props = AgendaType;
 export default function AgendaCard({ title, image, date, time, location, href }: Props) {
   console.log('AgendaCard rendu', title);
   return (
-    <div className="event-card">
+    <div className="agenda-card">
       <h3>{title}</h3>
-      <img src={image} alt={title} className="actu-image" />
+      <img src={image} alt={title} className="agenda-image" />
 
-      <div className="event-details">
+      <div className="agenda-details">
         <p><FaCalendarAlt /> {date}</p>
         <p><FaClock /> {time}</p>
         <p><FaMapMarkerAlt /> {location}</p>

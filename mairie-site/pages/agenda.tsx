@@ -55,7 +55,7 @@ export default function Agenda() {
           alt="photo d'un agenda noir sur table en bois"
           className="image"
         />
-        <div className="grid">
+        <div className="agenda-grid">
           {agendas.length > 0 ? (
             agendas.map((agenda, index) => (
               <AgendaCard

@@ -44,12 +44,12 @@ export default function AuzouvilleSurSaane() {
   return (
     <>
       <SeoHead
-        title="Mairie d'Auzouville-sur-Sâane"
-        description="Informations et actualités de la mairie d'Auzouville-sur-Sâane."
+        title="Mairie d'Auzouville-sur-Saâne"
+        description="Informations et actualités de la mairie d'Auzouville-sur-Saâne."
         />
       <Header />
       <main className="sub-page">
-        <h1 className="sub-title">Auzouville-sur-Sâane</h1>
+        <h1 className="sub-title">Auzouville-sur-Saâne</h1>
 
         {/* === Carrousel des événements === */}
         <section>
@@ -78,9 +78,9 @@ export default function AuzouvilleSurSaane() {
         <section>
                   <h3 className="section-title">Localisation</h3>
                   <TownMapClient
-                    name="Mairie de Lestanville"
+                    name="Auzouville-sur-Saâne"
                     address="12 rue du centre"
-                    position={[49.5000, 0.8000]}
+                    position={[49.744, 0.936]} // Latitude, Longitude
                   />
                 </section>
       </main>

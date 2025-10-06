@@ -20,11 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "compilerOptions": {
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
-  }
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

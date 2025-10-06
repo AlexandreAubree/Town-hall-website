@@ -410,6 +410,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiActuMairieActuMairie extends Struct.CollectionTypeSchema {
+  collectionName: 'actu_mairies';
+  info: {
+    displayName: 'Actu-mairie';
+    pluralName: 'actu-mairies';
+    singularName: 'actu-mairie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.DateTime;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::actu-mairie.actu-mairie'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    visible: Schema.Attribute.Boolean;
+  };
+}
+
 export interface ApiAgendaCardAgendaCard extends Struct.CollectionTypeSchema {
   collectionName: 'agenda_cards';
   info: {
@@ -445,7 +478,7 @@ export interface ApiAgendaCardAgendaCard extends Struct.CollectionTypeSchema {
 export interface ApiEvenementEvenement extends Struct.CollectionTypeSchema {
   collectionName: 'evenements';
   info: {
-    displayName: 'Event';
+    displayName: 'Actu-\u00E9cole';
     pluralName: 'evenements';
     singularName: 'evenement';
   };
@@ -985,6 +1018,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::actu-mairie.actu-mairie': ApiActuMairieActuMairie;
       'api::agenda-card.agenda-card': ApiAgendaCardAgendaCard;
       'api::evenement.evenement': ApiEvenementEvenement;
       'plugin::content-releases.release': PluginContentReleasesRelease;
