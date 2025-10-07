@@ -80,7 +80,7 @@ export default function SaintOuenLeMauger() {
           <TownMapClient
             name="Mairie de Saint-Ouen-le-Mauger"
             address="12 rue du centre"
-            position={[49.5000, 0.8000]}
+            position={[49.758, 0.962]} // Latitude, Longitude
           />
         </section>
       </main>

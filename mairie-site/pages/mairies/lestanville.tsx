@@ -80,7 +80,7 @@ export default function Lestanville() {
           <TownMapClient
             name="Mairie de Lestanville"
             address="12 rue du centre"
-            position={[49.5000, 0.8000]}
+            position={[49.747, 0.9585]} // coordonnées GPS
           />
         </section>
       </main>

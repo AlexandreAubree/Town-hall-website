@@ -32,6 +32,9 @@
     },
     "location": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

@@ -80,7 +80,7 @@ export default function SaintPierreBenouville() {
           <TownMapClient
             name="Mairie de Saint-Pierre-Bénouville"
             address="12 rue du centre"
-            position={[49.5000, 0.8000]}
+            position={[49.74, 0.97]} // Latitude, Longitude
           />
         </section>
       </main>

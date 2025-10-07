@@ -80,7 +80,7 @@ export default function Royville() {
           <TownMapClient
             name="Mairie de Royville"
             address="12 rue du centre"
-            position={[49.5000, 0.8000]}
+            position={[49.775, 0.956]} // coordonnées GPS
           />
         </section>
       </main>

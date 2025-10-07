@@ -1,13 +1,12 @@
-import Link from 'next/link';
+import { useState } from 'react';
 import { AgendaType } from './types';
 import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 
-type Props = AgendaType;
+export default function AgendaCard({ title, image, date, time, location, description }: AgendaType) {
+  const [expanded, setExpanded] = useState(false);
 
-export default function AgendaCard({ title, image, date, time, location, href }: Props) {
-  console.log('AgendaCard rendu', title);
   return (
-    <div className="agenda-card">
+    <div className={`agenda-card ${expanded ? 'expanded' : ''}`}>
       <h3>{title}</h3>
       <img src={image} alt={title} className="agenda-image" />
 
@@ -17,11 +16,15 @@ export default function AgendaCard({ title, image, date, time, location, href }:
         <p><FaMapMarkerAlt /> {location}</p>
       </div>
 
-      {href && (
-        <Link href={href}>
-          <button className="voir-plus">Voir plus</button>
-        </Link>
+      {expanded && description && (
+        <div className="agenda-description">
+          <p>{description}</p>
+        </div>
       )}
+
+      <button className="voir-plus" onClick={() => setExpanded(!expanded)}>
+        {expanded ? 'Voir moins' : 'Voir plus'}
+      </button>
     </div>
   );
 }

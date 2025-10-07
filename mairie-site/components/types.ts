@@ -14,7 +14,8 @@ export type AgendaType = {
   date: string;
   time: string;
   location: string;
-  href?: string; // lien vers la page détaillée
+  href?: string; 
+  description?: string;
 };
 
 export type ServiceType = {

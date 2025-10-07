@@ -29,6 +29,7 @@ export default function Agenda() {
             time: item.time,
             location: item.location,
             href: `/agenda/${item.id}`,
+            description: item.description || ''
           };
         }).filter(Boolean); // retire les null
 
@@ -66,6 +67,7 @@ export default function Agenda() {
                 date={agenda.date}
                 time={agenda.time}
                 href={agenda.href}
+                description={agenda.description}
               />
             ))
           ) : (

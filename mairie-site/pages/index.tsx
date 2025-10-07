@@ -12,7 +12,7 @@ export default function Home() {
         {/* Section d’introduction avec header sémantique */}
         <section aria-labelledby="intro-title">
           <header>
-            <h1 id="intro-title">Bienvenue dans la communauté de communes Terroir de Caux</h1>
+            <h1 id="intro-title">Bienvenue dans la communauté des 5 villages</h1>
           </header>
           <p>Choisissez une commune ou explorez les services proposés.</p>
         </section>
