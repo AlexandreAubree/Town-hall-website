@@ -8,13 +8,12 @@ export default function Header() {
     <>
       <header className="header">
         <div className="header-container">
-          <Link href="/" className="header-title">Communauté des 5 villages</Link>
+          <Link href="/" className="header-title">Les 5 villages</Link>
 
           {/* Navigation visible uniquement à partir du format tablette */}
           <nav className="nav-desktop">
             <Link href="/agenda" className="nav-link">Agenda</Link>
             <Link href="/sivos" className="nav-link">SIVOS</Link>
-            <Link href="/services" className="nav-link">Services</Link>
           </nav>
 
           {/* Bouton burger visible uniquement sur mobile */}
@@ -28,9 +27,13 @@ export default function Header() {
           <nav className="burger-menu" onClick={(e) => e.stopPropagation()}>
             <button className="burger-close" onClick={() => setIsOpen(false)}>✕</button>
             <ul className="burger-list">
-              <li><Link href="/services" className="burger-link">Services</Link></li>
               <li><Link href="/sivos" className="burger-link">SIVOS</Link></li>
               <li><Link href="/agenda" className="burger-link">Agenda</Link></li>
+              <li><Link href="/mairies/auzouville-sur-saane" className="burger-link">Auzouville-sur-Saâne</Link></li>
+              <li><Link href="/mairies/lestanville" className="burger-link">Lestanville</Link></li>
+              <li><Link href="/mairies/royville" className="burger-link">Royville</Link></li>
+              <li><Link href="/mairies/saint-ouen-le-mauger" className="burger-link">Saint-Ouen-le-Mauger</Link></li>
+              <li><Link href="/mairies/saint-pierre-benouville" className="burger-link">Saint-Pierre-Bénouville</Link></li>
             </ul>
           </nav>
         </div>

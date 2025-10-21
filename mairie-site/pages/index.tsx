@@ -25,8 +25,14 @@ export default function Home() {
             <VillageCard name="Lestanville" image="/lestanville.jpg" href="/mairies/lestanville" />
             <VillageCard name="Royville" image="/royville.jpeg" href="/mairies/royville" />
             <VillageCard name="Saint-Ouen-le-Mauger" image="/saint_ouen_le_mauger.jpg" href="/mairies/saint-ouen-le-mauger" />
-            <VillageCard name="Saint-Pierre-Bénouville" image="/st_pierre_benouville.jpg" href="/mairies/saint-pierre-benouville" />
-            
+            <VillageCard name="Saint-Pierre-Bénouville" image="/st_pierre_benouville.jpg" href="/mairies/saint-pierre-benouville" /> 
+          </div>
+        </section>
+
+        <section aria-labelledby="sivos-title">
+          <h2 id="sivos-title">SIVOS des 5 villages</h2>
+          <div className="SivosCard">
+            <VillageCard name="SIVOS des 5 villages" image="/sivos.jpg" href="/sivos" />
           </div>
         </section>
 
