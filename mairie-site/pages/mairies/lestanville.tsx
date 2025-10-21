@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import TownMapClient from '../../components/TownMapClient';
 import EventCarousel from '../../components/EventCarousel';
 import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneSquare } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Lestanville() {
 
@@ -60,10 +61,13 @@ export default function Lestanville() {
         <h2>Mairie</h2>
 
         {/* === Image mairie === */}
-        <img
+        <Image
           src="/mairie_lestanville.jpg"
           alt="Photo de la mairie de Lestanville"
           className="image"
+          width={600}
+          height={400}
+          priority
         />
 
         {/* === Infos utiles === */}

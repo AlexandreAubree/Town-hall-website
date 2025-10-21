@@ -51,11 +51,7 @@ export default function Agenda() {
       <Header />
       <main className="main-page">
         <h1>Agenda</h1>
-        <img
-          src="/agenda.jpg"
-          alt="photo d'un agenda noir sur table en bois"
-          className="image"
-        />
+        
         <div className="agenda-grid">
           {agendas.length > 0 ? (
             agendas.map((agenda, index) => (

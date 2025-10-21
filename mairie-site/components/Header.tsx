@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,14 @@ export default function Header() {
     <>
       <header className="header">
         <div className="header-container">
+          <Image
+            src="/la-seine-maritime_blason-fr_wp.webp"
+            alt="Armoirie de la Seine-Maritime"
+            width={120} // adapte à ton design
+            height={120}
+            className="header-logo"
+            priority // charge dès le début
+          />
           <Link href="/" className="header-title">Les 5 villages</Link>
 
           {/* Navigation visible uniquement à partir du format tablette */}

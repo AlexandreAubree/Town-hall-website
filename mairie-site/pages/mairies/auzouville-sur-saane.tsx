@@ -6,6 +6,7 @@ import { EventType } from '../../components/types';
 import { useEffect, useState } from 'react';
 import EventCarousel from '../../components/EventCarousel';
 import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneSquare } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function AuzouvilleSurSaane() {
 
@@ -60,10 +61,13 @@ export default function AuzouvilleSurSaane() {
         <h2>Mairie</h2>
 
         {/* === Image mairie === */}
-        <img
+        <Image
           src="/mairie_auzouville_sur_saane.jpg"
           alt="Photo de la mairie de Auzouville-sur-Sâane"
           className="image"
+          width={600}
+          height={400}
+          priority
         />
 
         {/* === Infos utiles === */}
