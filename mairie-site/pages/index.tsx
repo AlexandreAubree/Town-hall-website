@@ -14,7 +14,7 @@ export default function Home() {
           <header>
             <h1 id="intro-title">Bienvenue dans la communauté des 5 villages</h1>
           </header>
-          <p>Choisissez une commune ou explorez les services proposés.</p>
+          <p>Choisissez une commune ou explorez le SIVOS et l'agenda intercommunal proposés.</p>
         </section>
 
         {/* Section des communes avec titre clair */}

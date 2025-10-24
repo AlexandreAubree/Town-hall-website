@@ -54,7 +54,7 @@ export default function Lestanville() {
 
         {/* === Carrousel des événements === */}
         <section>
-          <h2 className="section-title">Actualités</h2>
+          <h2>Actualités</h2>
           <EventCarousel events={events} />
         </section>
 
@@ -72,15 +72,16 @@ export default function Lestanville() {
 
         {/* === Infos utiles === */}
         <section>
-          <h2 className="section-title">Infos utiles</h2>
+          <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
             <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
             <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li><FaPhoneSquare /> Mail : </li>
           </ul>
         </section>
         <section>
-          <h3 className="section-title">Localisation</h3>
+          <h3>Localisation</h3>
           <TownMapClient
             name="Mairie de Lestanville"
             address="12 rue du centre"

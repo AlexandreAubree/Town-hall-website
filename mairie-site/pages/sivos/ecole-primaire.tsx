@@ -43,35 +43,27 @@ export default function EcolePrimaire() {
   return (
     <>
       <SeoHead
-        title="École primaire"
-        description="Informations et actualités des écoles primaire."
+        title="École élémentaire"
+        description="Informations et actualités de l'écoles élémentaire de Saint-Pierre Bénouville."
       />
       <Header />
       <main className="sub-page">
-        <h1 className="sub-title">École primaire</h1>
+        <h1 className="sub-title">École élémentaire de Saint-Pierre Bénouville</h1>
 
         {/* === Carrousel des événements === */}
         <section>
-          <h2 className="section-title">Actualités</h2>
+          <h2>Actualités</h2>
           <EventCarousel events={events} />
         </section>
 
-        <h2>École primaire</h2>
-
-        {/* === Image école === */}
-        <img
-          src="/.jpg"
-          alt="Photo de l'école primaire"
-          className="image"
-        />
-
         {/* === Infos utiles === */}
         <section>
-          <h2 className="section-title">Infos utiles</h2>
+          <h3>Informations utiles</h3>
           <ul className="info-list">
-            <li><FaMapMarkerAlt /> Adresse école : 12 rue du centre</li>
-            <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
+            <li><FaMapMarkerAlt /> Adresse de l'école : 6 rue de la Vallée, 76890 ST PIERRE BENOUVILLE </li>
+            <li><FaCalendarAlt /> Horaires et jours d'ouvertures : Lundi, Mardi, Jeudi et Vendredi de 8h40 à 11h40 le matin et de 13h20 à 16h20 l'après-midi</li>
             <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li><FaPhoneSquare /> Mail : </li>
           </ul>
         </section>
       </main>

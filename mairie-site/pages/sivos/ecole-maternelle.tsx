@@ -5,6 +5,7 @@ import { EventType } from '../../components/types';
 import { useEffect, useState } from 'react';
 import EventCarousel from '../../components/EventCarousel';
 import { FaCalendarAlt, FaMapMarkerAlt, FaPhoneSquare } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function EcoleMaternelle() {
   
@@ -48,30 +49,22 @@ export default function EcoleMaternelle() {
       />
       <Header />
       <main className="sub-page">
-        <h1 className="sub-title">École maternelle</h1>
+        <h1>École maternelle de Saint-Ouen-le-Mauger</h1>
 
         {/* === Carrousel des événements === */}
         <section>
-          <h2 className="section-title">Actualités</h2>
+          <h2>Actualités</h2>
           <EventCarousel events={events} />
         </section>
 
-        <h2>École maternelle</h2>
-
-        {/* === Image école === */}
-        <img
-          src="/.jpg"
-          alt="Photo de l'école maternelle"
-          className="image"
-        />
-
         {/* === Infos utiles === */}
-        <section>
-          <h2 className="section-title">Infos utiles</h2>
+        <section className='paragraph'>
+          <h3>Informations utiles</h3>
           <ul className="info-list">
-            <li><FaMapMarkerAlt /> Adresse école : 12 rue du centre</li>
-            <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li><FaMapMarkerAlt /> Adresse école : 140 route du Manoir de Lestanville, 76730 ST OUEN LE MAUGER</li>
+            <li><FaCalendarAlt /> Horaires et jours d'ouvertures : Lundi, Mardi, Jeudi et Vendredi de 9h à 12h le matin et de 13h40 à 16h40 l'après-midi</li>
+            <li><FaPhoneSquare /> Contact : 02 35 04 49 44</li>
+            <li><FaPhoneSquare /> Mail : ce.0760372S@ac-normandie.fr</li>
           </ul>
         </section>
       </main>

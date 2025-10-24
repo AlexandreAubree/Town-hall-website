@@ -19,7 +19,7 @@ export default function Sivos() {
         <section>
           <div className="grid-sivos">
             <SivosCard name="École maternelle" image="/ecole_maternelle.jpg" href="/sivos/ecole-maternelle" />
-            <SivosCard name="École primaire" image="/ecole_primaire.jpg" href="/sivos/ecole-primaire" />
+            <SivosCard name="École élémentaire" image="/ecole_primaire.jpg" href="/sivos/ecole-primaire" />
             <SivosCard name="Cantine scolaire" image="/cantine.jpg" href="/sivos/cantine" />
             <SivosCard name="Documents" image="/documents.jpg" href="/sivos/documents" />
           </div>

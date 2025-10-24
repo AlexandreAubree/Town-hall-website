@@ -1,5 +1,3 @@
-import TownMap from "./LeafletMap";
-
 export type EventType = {
   title: string;
   image: string;
@@ -18,11 +16,9 @@ export type AgendaType = {
   description?: string;
 };
 
-export type ServiceType = {
-  name: string;
-  description: string;
-  icon: string; // URL de l'icône
-  link?: string; // lien vers plus d'infos
+export type CantineType = {
+  title: string;
+  image: string;
 };
 
 export type TownMapType = {

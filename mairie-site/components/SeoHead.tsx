@@ -9,8 +9,8 @@ interface SeoHeadProps {
 }
 
 export default function SeoHead({
-  title = "Communauté des 5 villages",
-  description = "Site officiel de la communauté des 5 villages : agenda, services, SIVOS et informations.",
+  title = "Les 5 villages",
+  description = "Site officiel de la communauté des 5 villages : agenda, SIVOS et informations sur chaque mairie.",
   image = "https://localhost:3000/og-image.jpg", //à remplacer par l'URL de prod
   robots = "index, follow",
 }: SeoHeadProps) {
@@ -19,14 +19,12 @@ export default function SeoHead({
   const canonical = currentUrl.split("?")[0]; // sans query params
 
   const defaultTitleMap: Record<string, string> = {
-    "/": "Accueil – La communauté des 5 villages",
+    "/": "Accueil – Les 5 villages",
     "/agenda": "Agenda des 5 villages",
     "/sivos": "SIVOS – Services intercommunaux",
-    "/services": "Services municipaux",
-    
   };
 
-  const resolvedTitle = title || defaultTitleMap[router.pathname] || "Communauté des 5 villages";
+  const resolvedTitle = title || defaultTitleMap[router.pathname] || "Les 5 villages";
 
   return (
     <Head>
