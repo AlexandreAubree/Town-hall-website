@@ -57,7 +57,7 @@ export default function EcolePrimaire() {
         </section>
 
         {/* === Infos utiles === */}
-        <section>
+        <section className="paragraph">
           <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse de l'école : 6 rue de la Vallée, 76890 ST PIERRE BENOUVILLE </li>
