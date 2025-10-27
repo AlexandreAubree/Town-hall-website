@@ -17,14 +17,16 @@ export default function Documents() {
       />
       <Header />
       <main className="main-page">
-        <h1 className="page-title">Documents scolaire</h1>
-        <ul className="service-list">
+        <h1>Documents scolaire</h1>
+        <ul className="doc-list">
           {services.map((service, index) => (
-            <li key={index} className="service-card">
-              <h2 className="service-name">{service.name}</h2>
-              <p className="service-contact">{service.contact}</p>
-              <p className="service-hours">{service.horaires}</p>
-            </li>
+            <section key={index} className="paragraph">
+             <li key={index}>
+              <h3>{service.name}</h3>
+              <p>{service.contact}</p>
+              <p>{service.horaires}</p>
+             </li>
+            </section>
           ))}
         </ul>
       </main>
