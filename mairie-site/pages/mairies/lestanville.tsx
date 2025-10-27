@@ -71,13 +71,15 @@ export default function Lestanville() {
         />
 
         {/* === Infos utiles === */}
-        <section>
+        <section className='paragraph' >
           <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+            <li>Maire : </li>
             <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
-            <li><FaPhoneSquare /> Mail : </li>
+            <li>Secrétaire : </li>
+            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+            <li>Email : </li>
           </ul>
         </section>
         <section>
@@ -87,6 +89,27 @@ export default function Lestanville() {
             address="12 rue du centre"
             position={[49.747, 0.9585]} // coordonnées GPS
           />
+        </section>
+        <section className='paragraph'>
+          <h3> À propos de Lestanville</h3>
+          <p >
+          Lestanville est une charmante commune située dans le département de la Seine-Maritime, en Normandie. Nichée au cœur de la campagne normande, elle offre un cadre paisible et pittoresque, idéal pour les amoureux de la nature et du patrimoine rural. La commune est entourée de paysages verdoyants, de champs agricoles et de petites forêts, offrant de nombreuses possibilités de randonnées et de balades à vélo.
+          </p>
+          <p>
+          Lestanville est également riche en histoire, avec plusieurs bâtiments anciens et une église datant de plusieurs siècles. La vie communautaire y est dynamique, avec des événements locaux réguliers qui renforcent le lien entre les habitants. La mairie joue un rôle central dans l'organisation de ces activités et dans la gestion des affaires locales.
+          </p>
+          <p>
+          En somme, Lestanville est une commune qui allie charme rural, histoire et convivialité, faisant d'elle un lieu de vie agréable pour ses résidents et une destination intéressante pour les visiteurs.
+          </p>
+        </section>
+        <section className='paragraph'>
+          <h3> Lieux importants</h3>
+          <p>
+          Parmi les lieux importants de Lestanville, on trouve l'église Saint-Martin, un édifice historique qui témoigne de l'architecture religieuse normande. La mairie elle-même est un centre névralgique pour les habitants, où se tiennent les réunions municipales et diverses activités communautaires. Le village dispose également d'une salle des fêtes, utilisée pour les événements locaux tels que les mariages, les fêtes de village et les réunions associatives.
+          </p>
+          <p>
+          Les espaces naturels environnants, comme les sentiers de randonnée et les aires de pique-nique, sont également des lieux prisés par les résidents et les visiteurs. Ces espaces offrent un cadre idéal pour se détendre et profiter de la beauté naturelle de la région.
+          </p>
         </section>
       </main>
       <Footer />

@@ -71,12 +71,15 @@ export default function SaintPierreBenouville() {
         />
 
         {/* === Infos utiles === */}
-        <section>
-          <h2 className="section-title">Infos utiles</h2>
+        <section className='paragraph' >
+          <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+            <li>Maire : </li>
             <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li>Secrétaire : </li>
+            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+            <li>Email : </li>
           </ul>
         </section>
         <section>
@@ -86,6 +89,18 @@ export default function SaintPierreBenouville() {
             address="12 rue du centre"
             position={[49.74, 0.97]} // Latitude, Longitude
           />
+        </section>
+        <section className='paragraph'>
+          <h3>À propos de Saint-Pierre-Bénouville</h3>
+          <p>
+            Saint-Pierre-Bénouville est une charmante commune située dans le département de la Seine-Maritime, en Normandie. Connue pour son cadre pittoresque et son riche patrimoine historique, la commune offre un environnement paisible à ses habitants. La mairie s'engage à fournir des services de qualité et à promouvoir le bien-être de la communauté locale.
+          </p>
+        </section>
+        <section className='paragraph'>
+          <h3> Lieux importants</h3>
+          <p>
+            Parmi les lieux importants de Saint-Pierre-Bénouville, on trouve l'église paroissiale dédiée à Saint Pierre, un édifice historique qui témoigne de l'architecture religieuse traditionnelle de la région. La commune dispose également d'une école primaire qui accueille les enfants du village et des environs. Pour les loisirs, le parc communal offre un espace vert agréable pour les promenades et les activités en plein air.
+          </p>
         </section>
       </main>
       <Footer />

@@ -4,9 +4,9 @@ import SeoHead from '../../components/SeoHead';
 
 export default function Documents() {
   const services = [
-    { name: 'Urbanisme', contact: 'urbanisme@mairie.fr', horaires: 'Lun-Ven 9h-12h / 14h-17h' },
-    { name: 'État civil', contact: 'etatcivil@mairie.fr', horaires: 'Lun-Ven 9h-12h' },
-    { name: 'Bibliothèque', contact: 'bibliotheque@mairie.fr', horaires: 'Mercredi et Samedi 10h-18h' },
+    { name: 'Inscription cantine scolaire', contact: 'cantinescolaire@mairie.fr', horaires: 'Lun-Ven 9h-12h / 14h-17h' },
+    { name: 'Garderie', contact: 'garderies@mairie.fr', horaires: 'Lun-Ven 9h-12h' },
+    { name: 'Transports scolaire', contact: 'transports@mairie.fr', horaires: 'Mercredi et Samedi 10h-18h' },
   ];
 
   return (

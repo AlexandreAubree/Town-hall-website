@@ -71,12 +71,15 @@ export default function SaintOuenLeMauger() {
         />
 
         {/* === Infos utiles === */}
-        <section>
-          <h2 className="section-title">Infos utiles</h2>
+         <section className='paragraph' >
+          <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+            <li>Maire : </li>
             <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li>Secrétaire : </li>
+            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+            <li>Email : </li>
           </ul>
         </section>
         <section>
@@ -87,6 +90,18 @@ export default function SaintOuenLeMauger() {
             position={[49.758, 0.962]} // Latitude, Longitude
           />
         </section>
+        <section className='paragraph'>
+          <h3>À propos de Saint-Ouen le Mauger</h3>
+          <p>
+            Saint-Ouen le Mauger est une charmante commune située dans le département de la Seine-Maritime, en Normandie. Connue pour son riche patrimoine historique et ses paysages pittoresques, elle offre un cadre de vie paisible à ses habitants. La mairie s'engage à fournir des services de qualité et à promouvoir le développement local à travers diverses initiatives et événements communautaires.
+          </p>
+        </section>
+        <section className='paragraph'>
+          <h3> Lieux importants</h3>
+          <p>
+            Parmi les lieux importants de Saint-Ouen le Mauger, on trouve l'église Saint-Ouen, un édifice historique datant du XIIe siècle, ainsi que plusieurs sentiers de randonnée qui permettent de découvrir la beauté naturelle de la région. La commune organise également des événements culturels et festifs tout au long de l'année, renforçant ainsi le lien entre les habitants.
+          </p>
+        </section>          
       </main>
       <Footer />
     </>

@@ -71,12 +71,15 @@ export default function Royville() {
         />
 
         {/* === Infos utiles === */}
-        <section>
-          <h2 className="section-title">Infos utiles</h2>
+         <section className='paragraph' >
+          <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+            <li>Maire : </li>
             <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li>Secrétaire : </li>
+            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+            <li>Email : </li>
           </ul>
         </section>
         <section>
@@ -86,6 +89,25 @@ export default function Royville() {
             address="12 rue du centre"
             position={[49.775, 0.956]} // coordonnées GPS
           />
+        </section>
+        <section className='paragraph'>
+          <h3>À propos de Royville</h3>
+          <p>
+            Royville est une charmante commune située dans le département de la Seine-Maritime, en Normandie. 
+            Connue pour son cadre paisible et son riche patrimoine historique, elle offre un mélange unique de 
+            traditions rurales et de vie communautaire dynamique. La mairie de Royville s'engage à fournir des 
+            services de qualité à ses habitants tout en préservant l'authenticité et le charme du village.
+          </p>
+        </section>
+        <section className='paragraph'>
+          <h3> Lieux importants</h3>
+          <p>
+          Parmi les lieux notables de Royville, on trouve l'église Saint-Martin, un édifice historique datant du 
+          XIIe siècle, qui témoigne de l'architecture religieuse médiévale. Le parc communal, avec ses espaces 
+          verts bien entretenus, est un lieu de détente apprécié des résidents. De plus, le marché local, 
+          organisé chaque semaine, est un rendez-vous incontournable pour découvrir les produits régionaux et 
+          soutenir les producteurs locaux.
+          </p>
         </section>
       </main>
       <Footer />

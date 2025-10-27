@@ -47,10 +47,20 @@ export default function AuzouvilleSurSaane() {
       <SeoHead
         title="Mairie d'Auzouville-sur-Saâne"
         description="Informations et actualités de la mairie d'Auzouville-sur-Saâne."
-        />
+      />
       <Header />
       <main className="sub-page">
-        <h1>Auzouville-sur-Saâne</h1>
+
+        <h1>
+          <Image
+          src="/la-seine-maritime_blason-fr_wp.webp"
+          alt="Armoirie de la Seine-Maritime"
+          width={120} // adapte à ton design
+          height={120}
+          priority // charge dès le début
+        />
+          Auzouville-sur-Saâne
+        </h1>
 
         {/* === Carrousel des événements === */}
         <section>
@@ -75,18 +85,36 @@ export default function AuzouvilleSurSaane() {
           <h3>Informations utiles</h3>
           <ul className="info-list">
             <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+            <li>Maire : </li>
             <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li><FaPhoneSquare /> Contact : 02 35 XX XX XX</li>
+            <li>Secrétaire : </li>
+            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+            <li>Email : </li>
           </ul>
         </section>
         <section>
-                  <h3>Localisation</h3>
-                  <TownMapClient
-                    name="Auzouville-sur-Saâne"
-                    address="12 rue du centre"
-                    position={[49.744, 0.936]} // Latitude, Longitude
-                  />
-                </section>
+          <h3>Localisation</h3>
+          <TownMapClient
+            name="Auzouville-sur-Saâne"
+            address="12 rue du centre"
+            position={[49.744, 0.936]} // Latitude, Longitude
+          />
+        </section>
+        <section className='paragraph'>
+          <h3>À propos d'Auzouville-sur-Saâne</h3>
+          <p>
+            Auzouville-sur-Saâne est une charmante commune située dans le département de la Seine-Maritime, en Normandie. Connue pour son cadre pittoresque et son riche patrimoine historique, la commune offre un mélange unique de traditions rurales et de vie communautaire dynamique. Les habitants d'Auzouville-sur-Saâne sont fiers de leur village, qui est entouré de paysages naturels magnifiques, notamment la vallée de la Saâne.
+          </p>
+          <p>
+            La mairie d'Auzouville-sur-Saâne joue un rôle central dans la vie locale, organisant divers événements culturels et sociaux tout au long de l'année. La commune est également engagée dans des initiatives visant à préserver son environnement naturel et à promouvoir le développement durable.
+          </p>
+        </section>
+        <section className='paragraph'>
+          <h3>Lieux importants</h3>
+          <p>
+            Parmi les lieux d'intérêt à Auzouville-sur-Saâne, on trouve l'église Saint-Martin, un édifice historique datant du XIIe siècle, qui témoigne de l'architecture religieuse de la région. Le village dispose également de plusieurs sentiers de randonnée qui permettent aux visiteurs de découvrir la beauté naturelle des environs, notamment les rives de la Saâne et les collines environnantes.
+          </p>
+        </section>
       </main>
       <Footer />
     </>
@@ -95,8 +123,8 @@ export default function AuzouvilleSurSaane() {
 
 
 
-  
-  
-     
 
-        
+
+
+
+
