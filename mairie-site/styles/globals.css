@@ -162,22 +162,15 @@ img {
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s ease;
 }
 
-
-@media (min-width: 768px) {
-  .header-container {   
-    flex-direction: row;
-  }
-}
-
 .header-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-decoration: none;
@@ -210,7 +203,7 @@ img {
 
 @media (min-width: 1024px) {
   .header-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
