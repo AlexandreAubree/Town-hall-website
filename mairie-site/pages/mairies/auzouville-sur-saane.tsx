@@ -53,45 +53,46 @@ export default function AuzouvilleSurSaane() {
 
         <h1>
           <Image
-          src="/la-seine-maritime_blason-fr_wp.webp"
-          alt="Armoirie de la Seine-Maritime"
-          width={120} // adapte à ton design
-          height={120}
-          priority // charge dès le début
-        />
+            src="/la-seine-maritime_blason-fr_wp.webp"
+            alt="Armoirie de la Seine-Maritime"
+            width={120} // adapte à ton design
+            height={120}
+            priority // charge dès le début
+          />
           Auzouville-sur-Saâne
         </h1>
 
         {/* === Carrousel des événements === */}
-        <section>
-          <h2>Actualités</h2>
-          <EventCarousel events={events} />
-        </section>
+        <h2>Actualités</h2>
+        <EventCarousel events={events} />
 
         <h2>Mairie</h2>
 
-        {/* === Image mairie === */}
-        <Image
-          src="/mairie_auzouville_sur_saane.jpg"
-          alt="Photo de la mairie de Auzouville-sur-Sâane"
-          className="image"
-          width={600}
-          height={400}
-          priority
-        />
-
-        {/* === Infos utiles === */}
-        <section className='paragraph' >
-          <h3>Informations utiles</h3>
-          <ul className="info-list">
-            <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
-            <li>Maire : </li>
-            <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li>Secrétaire : </li>
-            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
-            <li>Email : </li>
-          </ul>
+        <section className='card-infos-mairie'>
+          {/* === Image mairie === */}
+          <Image
+            src="/mairie_auzouville_sur_saane.jpg"
+            alt="Photo de la mairie de Auzouville-sur-Sâane"
+            className="image"
+            width={600}
+            height={400}
+            priority
+          />
+          {/* === Infos utiles === */}
+          <section className='paragraph' >
+            <h3>Informations utiles</h3>
+            <ul className="info-list">
+              <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+              <li>Maire : </li>
+              <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
+              <li>Secrétaire : </li>
+              <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+              <li>Email : </li>
+            </ul>
+          </section>
         </section>
+        
+        {/* === Carte interactive === */}
         <section>
           <h3>Localisation</h3>
           <TownMapClient

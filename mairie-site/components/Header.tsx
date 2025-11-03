@@ -17,7 +17,7 @@ export default function Header() {
             className="header-logo"
             priority // charge dès le début
           />
-          <Link href="/" className="header-title">Les 5 villages</Link>
+          <Link href="/" className="header-title">Les 5 Villages</Link>
 
           {/* Navigation visible uniquement à partir du format tablette */}
           <nav className="nav-desktop">

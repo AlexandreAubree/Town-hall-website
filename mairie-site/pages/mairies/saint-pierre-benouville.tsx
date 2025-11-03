@@ -50,38 +50,47 @@ export default function SaintPierreBenouville() {
       />
       <Header />
       <main className="sub-page">
-        <h1 className="sub-title">Saint-Pierre-Bénouville</h1>
+        <h1>
+          <Image
+            src="/la-seine-maritime_blason-fr_wp.webp"
+            alt="Armoirie de la Seine-Maritime"
+            width={120} // adapte à ton design
+            height={120}
+            priority // charge dès le début
+          />
+          Saint-Pierre-Bénouville</h1>
 
         {/* === Carrousel des événements === */}
-        <section>
           <h2 className="section-title">Actualités</h2>
           <EventCarousel events={events} />
-        </section>
 
         <h2>Mairie</h2>
 
-        {/* === Image mairie === */}
-        <Image
-          src="/mairie_st_pierre_benouville.jpg"
-          alt="Photo de la mairie de Saint-Pierre-Bénouville"
-          className="image"
-          width={600}
-          height={400}
-          priority
-        />
+        <section className='card-infos-mairie'>
+          {/* === Image mairie === */}
+          <Image
+            src="/mairie_st_pierre_benouville.jpg"
+            alt="Photo de la mairie de Saint-Pierre-Bénouville"
+            className="image"
+            width={600}
+            height={400}
+            priority
+          />
 
-        {/* === Infos utiles === */}
-        <section className='paragraph' >
-          <h3>Informations utiles</h3>
-          <ul className="info-list">
-            <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
-            <li>Maire : </li>
-            <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
-            <li>Secrétaire : </li>
-            <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
-            <li>Email : </li>
-          </ul>
+          {/* === Infos utiles === */}
+          <section className='paragraph' >
+            <h3>Informations utiles</h3>
+            <ul className="info-list">
+              <li><FaMapMarkerAlt /> Adresse mairie : 12 rue du centre</li>
+              <li>Maire : </li>
+              <li><FaCalendarAlt /> Horaires : Lundi à Vendredi, 9h–12h / 14h–17h</li>
+              <li>Secrétaire : </li>
+              <li><FaPhoneSquare /> Téléphone : 02 35 XX XX XX</li>
+              <li>Email : </li>
+            </ul>
+          </section>
         </section>
+
         <section>
           <h3 className="section-title">Localisation</h3>
           <TownMapClient

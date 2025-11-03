@@ -48,7 +48,7 @@ export default function EcolePrimaire() {
       />
       <Header />
       <main className="sub-page">
-        <h1 className="sub-title">École élémentaire de Saint-Pierre Bénouville</h1>
+        <h1>École élémentaire de Saint-Pierre Bénouville</h1>
 
         {/* === Carrousel des événements === */}
         <section>

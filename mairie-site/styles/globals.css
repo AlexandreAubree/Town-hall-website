@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* === Couleurs campagne normande === */
 :root {
   --bg-header: #228B22;         /* vert forêt, bon contraste */
@@ -32,11 +28,11 @@ body::before {
   inset: 0;
   background-image: url('/terre de caux.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   filter: blur(3px);
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -114,7 +110,7 @@ h3 {
 
 p {
   font-size: 0.9rem;
-  margin-bottom: 0.4rem;
+  margin: 0.4rem;
 }
  
 @media (min-width: 640px) {
@@ -155,6 +151,9 @@ img {
   background: radial-gradient(circle at top left, #228B22, #9acd32);
   color: var(--text-header);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-container {
@@ -165,18 +164,25 @@ img {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
 .header-title {
+  font-family: 'Dancing Script', cursive;
   font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-decoration: none;
   color: var(--text-header);
   transition: color 0.3s ease;
+  background-color: rgb(228, 248, 235);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border-top-left-radius: 2rem;
+  box-shadow: 0 2px 6px rgb(0, 12, 0);
   position: relative;
+  margin-right: auto;
 }
 
 .header-title::after {
@@ -234,7 +240,7 @@ img {
 }
 
 .nav-link {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-header);
   text-decoration: none;
@@ -277,6 +283,7 @@ img {
 
 @media (min-width: 768px) {
   .burger-button {
+    font-size: 2.2rem;
     display: none;
   }
 }
@@ -335,11 +342,13 @@ img {
 
 /* === Styles pour le main générique === */
 .main-page {
- 
+  display: flex;
+  flex-direction: column;
   max-width: 1400px;
   height: 100%;
   justify-content: center;
   margin: 0 auto;
+  gap: 3rem;
   padding: 2rem 1rem;
 }
 @media (min-width: 640px) {
@@ -353,22 +362,23 @@ img {
   }
 }
 
-#intro-title {
+.intro-title {
+  display: flex;
+  justify-content: left;
   font-size: 1rem;
   font-weight: 700;
   color: #374151;
   margin-bottom: 1.5rem;
   line-height: 1.3;
-  text-align: center;
 }
 
 @media (min-width: 640px) {
-  #intro-title {
+  .intro-title {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #intro-title {
+  .intro-title {
     font-size: 2rem;
   }
 }
@@ -394,21 +404,42 @@ img {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   gap: 1.2rem;
   margin: 1rem;;
 }
-
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); 
   }
 }
-
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+
   }
+}
+
+.section-index {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-radius: 0.75rem;
+}
+@media (min-width: 640px) {
+  .section-index {
+    flex-direction: row; 
+  }
+}
+
+.paragraph-index {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
 }
 
 /* === Grille responsive pour les agendas === */
@@ -490,6 +521,34 @@ img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
 }
+@media (min-width: 640px) {
+  .card {
+    margin: 0 auto;
+    min-width: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+.card1 { grid-column: 1; grid-row: 1; }
+.card2 { grid-column: 3; grid-row: 1; }
+.card3 { grid-column: 2; grid-row: 2; }
+.card4 { grid-column: 1; grid-row: 2; }
+.card5 { grid-column: 3; grid-row: 2; }
+.card6 { 
+  grid-column: 2; 
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; 
+  font-weight: 700;
+}
+}
 
 .card:hover {
   transform: translateY(-15px);
@@ -502,65 +561,81 @@ img {
   height: 100px;
   object-fit: cover;
   
+  
 }
 
 @media (min-width: 640px) {
   .card-img {
+    max-width: 280px;
     height: 200px;
   }
 }
 
 @media (min-width: 1024px) {
   .card-img {
-    height: 400px;
+    max-width: 360px;
+    height: 300px;
   }
-}
-
-/* === Contenu de la carte === */
-.card-content {
-  padding: 1rem;
 }
 
 /* === Titre SEO optimisé === */
 .card-title {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 1.25rem;
   font-weight: 600;
   color: #374151;
   margin: 0;
+  padding: 0.5rem;
   line-height: 1.4;
+}
+@media (min-width: 640px) {
+  .card-title {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card-title {
+    font-size: 1.6rem;
+  }
 }
 
 /* === Page village === */
 .sub-page {
   display: flex;
   flex-direction: column;
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 1.5rem;
   gap: 1rem;
 }
-
-.sub-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text-header);
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
-  text-align: center;
-}
 @media (min-width: 640px) {
-  .sub-title {
-    font-size: 1.7rem;
+  .sub-page {
+    padding: 2rem;
+    gap: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
-  .sub-title {
-    font-size: 2.2rem;
+  .sub-page {
+    padding: 3rem;
+    gap: 2rem;
   }
 }
 
+.card-infos-mairie {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .card-infos-mairie {
+    flex-direction: row;
+    gap: 1.5rem;  
+  }
+}
+
+/* === Grille SIVOS === */
 .grid-sivos {
   display: grid;
   grid-template-columns: 1fr;
@@ -591,35 +666,67 @@ img {
   }
 }
 
-/* === Carrousel === */
 .carousel-container {
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+@media (min-width: 640px) {
+  .carousel-container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-container {
+    max-width: 800px;
+  }
 }
 
 .carousel-track {
-  margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  min-width: 100%;
   scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: #a3c4dc transparent;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: 280px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
-/* === Image dans le carrousel === */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+}
+
 .event-carousel-image {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 0.5rem;
 }
 
+/* === Carte événement === */
 .event-card {
   background-color: #ffffff;
   color: var(--text-body);
@@ -628,7 +735,8 @@ img {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  max-height: 350px;
+  height: 400px;
+  gap: 1rem;
   transition: box-shadow 0.3s ease;
 }
 
@@ -783,6 +891,7 @@ img {
     }
   }
 }
+
 
 @layer utilities {
 
