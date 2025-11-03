@@ -398,6 +398,7 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0.1rem auto;
+  max-height: 400px;
 }
 
 /* === Grille responsive === */
@@ -416,7 +417,6 @@ img {
   .grid {
     grid-template-rows: repeat(2, 1fr);
     gap: 1.5rem;
-
   }
 }
 
@@ -440,6 +440,25 @@ img {
   flex-direction: column;
   padding: 1rem;
   justify-content: center;
+}
+
+.section-index .card-img {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .section-index .card-img {
+    max-width: 550px;
+    height: 150px;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .section-index .card-img {
+    max-width: 700px;
+    height: 250px;
+  }
 }
 
 /* === Grille responsive pour les agendas === */
