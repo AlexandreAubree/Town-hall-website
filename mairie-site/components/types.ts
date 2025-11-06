@@ -26,3 +26,12 @@ export type TownMapType = {
   address: string;
   position: [number, number];
 };
+
+export type InfosType = {
+  phone: string;
+  email: string;
+  address: string;
+  openingHours: string;
+  secretary: string;
+  mayor: string;
+};

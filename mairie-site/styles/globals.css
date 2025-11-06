@@ -344,7 +344,7 @@ img {
 .main-page {
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  max-width: 100%;
   height: 100%;
   justify-content: center;
   margin: 0 auto;
@@ -387,8 +387,7 @@ img {
   display: block;
   padding: 1rem;
   background-color: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
+  border-top: 1 solid black;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
@@ -406,32 +405,42 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.2rem;
-  margin: 1rem;;
+  margin: 1rem;
+  padding-bottom: 3rem;
+  border-bottom: #171e29 0.5px solid;
 }
 @media (min-width: 640px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 4.5rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1124px) {
   .grid {
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 0.5fr);
     gap: 1.5rem;
+    padding:1rem 6rem 6rem 1rem;
   }
 }
 
 .section-index {
   display: flex;
   flex-direction: column;
-  max-width: 1024px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 3rem;
   gap: 1rem;
-  border-radius: 0.75rem;
+  border-bottom: #171e29 0.5px solid;
 }
 @media (min-width: 640px) {
   .section-index {
-    flex-direction: row; 
+    flex-direction: row;
+    padding-bottom: 4.5rem;; 
+  }
+}
+@media (min-width: 1024px) {
+  .section-index {
+    padding-bottom: 6rem;
   }
 }
 
@@ -442,22 +451,18 @@ img {
   justify-content: center;
 }
 
-.section-index .card-img {
+.section-index .card {
   width: 100%;
   height: 100px;
-  margin: 0 auto;
 }
 @media (min-width: 640px) {
-  .section-index .card-img {
-    max-width: 550px;
-    height: 150px;
-    margin: 0;
+  .section-index .card {
+    height: 200px;
   }
 }
 @media (min-width: 1024px) {
-  .section-index .card-img {
-    max-width: 700px;
-    height: 250px;
+  .section-index .card {
+    height: 300px;
   }
 }
 
@@ -468,7 +473,6 @@ img {
   gap: 2rem;
   justify-content: center;
 }
-
 
 .agenda-grid > * {
   flex: 1 1 auto;
@@ -501,7 +505,6 @@ img {
   transition: max-height 0.4s ease, opacity 0.4s ease;
   overflow: hidden;
 }
-
 @media (min-width: 640px) {
   .agenda-description {
     display: flex;
@@ -520,7 +523,6 @@ img {
   gap: 0.5rem;
   margin: 0.3rem 0;
 }
-
 @media (min-width: 640px) {
   .agenda-details {
     display: grid;
@@ -535,6 +537,7 @@ img {
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
+  height: 100%;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -552,21 +555,39 @@ img {
   }
 }
 
+.card6 { 
+  grid-column: 1; 
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; 
+  font-weight: 700;
+}
+@media (min-width: 640px) {
+  .card6 {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 1024px) {
+  .card6 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1124px) {
 .card1 { grid-column: 1; grid-row: 1; }
 .card2 { grid-column: 3; grid-row: 1; }
 .card3 { grid-column: 2; grid-row: 2; }
 .card4 { grid-column: 1; grid-row: 2; }
 .card5 { grid-column: 3; grid-row: 2; }
-.card6 { 
-  grid-column: 2; 
-  grid-row: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem; 
-  font-weight: 700;
-}
+.card6 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 2.5rem;
+  }
 }
 
 .card:hover {
@@ -578,22 +599,17 @@ img {
 .card-img {
   width: 100%;
   height: 100px;
-  object-fit: cover;
-  
-  
+  object-fit: cover; 
 }
-
 @media (min-width: 640px) {
   .card-img {
-    max-width: 280px;
     height: 200px;
   }
 }
-
 @media (min-width: 1024px) {
   .card-img {
     max-width: 360px;
-    height: 300px;
+    height: 500px;
   }
 }
 
@@ -627,18 +643,18 @@ img {
   max-width: 1300px;
   margin: 0 auto;
   padding: 1.5rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 @media (min-width: 640px) {
   .sub-page {
     padding: 2rem;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 }
 @media (min-width: 1024px) {
   .sub-page {
     padding: 3rem;
-    gap: 2rem;
+    gap: 4rem;
   }
 }
 
@@ -658,49 +674,45 @@ img {
 .grid-sivos {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   gap: 1.2rem;
   margin: 1rem;;
 }
-
 @media (min-width: 640px) {
   .grid-sivos {
     grid-template-columns: repeat(2, 1fr); 
   }
 }
-
-@media (min-width: 1024px) {
+@media (min-width: 1360px) {
   .grid-sivos {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.SivosCard {
-  display: flex;
-  justify-content: left;
-}
-@media (min-width: 640px) {
-  .SivosCard {
-    justify-content: center;
-  }
-}
-
 .carousel-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   position: relative;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  gap: 1rem;
   margin: auto;
+  border-top: 1px solid rgb(172, 10, 10);
+  border-bottom: 1px solid rgb(175, 7, 7);
+  border-radius: 0.5rem;
 }
 @media (min-width: 640px) {
   .carousel-container {
-    max-width: 600px;
+    max-width: 800px;
   }
 }
 @media (min-width: 1024px) {
   .carousel-container {
-    max-width: 800px;
+    max-width: 1000px;
   }
 }
 
@@ -716,7 +728,6 @@ img {
   scroll-snap-align: center;
   min-width: 100%;
   box-sizing: border-box;
-  padding: 1rem;
 }
 
 .carousel-controls {
@@ -739,47 +750,22 @@ img {
 }
 
 .event-carousel-image {
-  width: 100%;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   object-fit: cover;
   border-radius: 0.5rem;
 }
-
-/* === Carte événement === */
-.event-card {
-  background-color: #ffffff;
-  color: var(--text-body);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-  gap: 1rem;
-  transition: box-shadow 0.3s ease;
+@media (min-width: 640px) {
+  .event-carousel-image {
+    width: 450px;
+    height: 250px;
+  }
 }
-
-.event-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.event-card h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #374151;
-  margin: 0.5rem 0 0.2rem 0;
-}
-
-.event-details {
-  max-height: 100px;
-  overflow: hidden;
-  position: relative;
-  transition: max-height 0.3s ease;
-}
-
-.event-details.expanded {
-  max-height: 100%; /* ou auto si tu veux tout afficher */
-  overflow: auto;
+@media (min-width: 1024px) {
+  .event-carousel-image {
+    width: 600px;
+    height: 400px;
+  }
 }
 
 .voir-plus {
