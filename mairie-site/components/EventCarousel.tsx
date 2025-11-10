@@ -20,8 +20,7 @@ export default function EventCarousel({ events }: Props) {
 
   return (
     <div className="carousel-container">
-      <div
-        className="carousel-track"
+      <div className="carousel-track"
         ref={trackRef}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
@@ -37,7 +36,7 @@ export default function EventCarousel({ events }: Props) {
           className="carousel-button"
           onClick={handlePrev}
           disabled={currentIndex === 0}
-          aria-label="Événement précédent"
+          aria-label="actualité précédente"
         >
           ‹
         </button>
@@ -45,7 +44,7 @@ export default function EventCarousel({ events }: Props) {
           className="carousel-button"
           onClick={handleNext}
           disabled={currentIndex === events.length - 1}
-          aria-label="Événement suivant"
+          aria-label="actualité suivante"
         >
           ›
         </button>

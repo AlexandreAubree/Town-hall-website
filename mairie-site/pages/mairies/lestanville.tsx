@@ -58,17 +58,18 @@ export default function Lestanville() {
             height={120}
             priority // charge dès le début
           />
-          Lestanville</h1>
+          Lestanville
+        </h1>
 
-        {/* === Carrousel des événements === */}
-        <h2>Actualités</h2>
-        <EventCarousel events={events} />
+        <section className='section-actu'>
+          {/* === Carrousel des événements === */}
+          <h2>Actualités</h2>
+          <EventCarousel events={events} />
+        </section>
 
-
-        <h2>Mairie</h2>
 
         <section className='card-infos-mairie'>
-          {/* === Image mairie === */}
+          <h2>Mairie</h2>
           <Image
             src="/mairie_lestanville.jpg"
             alt="Photo de la mairie de Lestanville"
@@ -92,7 +93,7 @@ export default function Lestanville() {
           </section>
         </section>
 
-        <section>
+        <section className='section-localisation'>
           <h3>Localisation</h3>
           <TownMapClient
             name="Mairie de Lestanville"

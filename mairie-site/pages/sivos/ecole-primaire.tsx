@@ -51,7 +51,7 @@ export default function EcolePrimaire() {
         <h1>École élémentaire de Saint-Pierre Bénouville</h1>
 
         {/* === Carrousel des événements === */}
-        <section>
+        <section className='section-actu'>
           <h2>Actualités</h2>
           <EventCarousel events={events} />
         </section>

@@ -17,7 +17,7 @@ export default function EventCard({ title, image, date, location, description }:
   }, []);
 
   return (
-    <div className="carousel-container">
+    <div className='carousel'>
       <h3>{title}</h3>
       <Image 
       src={image} 

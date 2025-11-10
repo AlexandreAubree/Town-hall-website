@@ -58,16 +58,16 @@ export default function SaintPierreBenouville() {
             height={120}
             priority // charge dès le début
           />
-          Saint-Pierre-Bénouville</h1>
+          Saint-Pierre-Bénouville
+        </h1>
 
+        <section className='section-actu'></section>
         {/* === Carrousel des événements === */}
-          <h2 className="section-title">Actualités</h2>
-          <EventCarousel events={events} />
-
-        <h2>Mairie</h2>
+        <h2 className="section-title">Actualités</h2>
+        <EventCarousel events={events} />
 
         <section className='card-infos-mairie'>
-          {/* === Image mairie === */}
+          <h2>Mairie</h2>
           <Image
             src="/mairie_st_pierre_benouville.jpg"
             alt="Photo de la mairie de Saint-Pierre-Bénouville"
@@ -91,7 +91,7 @@ export default function SaintPierreBenouville() {
           </section>
         </section>
 
-        <section>
+        <section className='section-localisation'>
           <h3 className="section-title">Localisation</h3>
           <TownMapClient
             name="Mairie de Saint-Pierre-Bénouville"
