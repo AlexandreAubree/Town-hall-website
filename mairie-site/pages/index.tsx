@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='section-index'>
+        <section className='section-index-sivos'>
           <div className="paragraph-index">
             <h2><Link href="/sivos">Découvrez le SIVOS</Link></h2>
             <p>Informations et services scolaires pour les 5 villages.</p>
@@ -48,18 +48,18 @@ export default function Home() {
           <Image
             src="/sivos.jpg"
             alt="Photo d'un pot de crayons de couleur sur fond de classe floue"
-            className="card"
+            className="index-img"
             width={600}
             height={400}
             priority
           />
         </section>
 
-        <section className='section-index'>
+        <section className='section-index-agenda'>
           <Image
             src="/agenda-index.jpg"
             alt="Photo d'un agenda sur table en bois"
-            className="card"
+            className="index-img"
             width={600}
             height={400}
             priority
