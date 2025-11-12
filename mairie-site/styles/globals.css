@@ -821,7 +821,7 @@ img {
   position: absolute;
   width: 100%;
   display: flex;
-  margin-top: 1.5rem;
+  
   justify-content: space-between;
   transform: translateY(-50%);
 }
