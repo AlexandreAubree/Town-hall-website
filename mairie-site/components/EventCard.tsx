@@ -18,7 +18,7 @@ export default function EventCard({ title, image, date, location, description }:
 
   return (
     <div className='carousel'>
-      <h3>{title}</h3>
+     
       <Image 
       src={image} 
       alt={title} 
@@ -28,6 +28,7 @@ export default function EventCard({ title, image, date, location, description }:
       />
       
       <div className={`event-details ${isOverflowing ? 'expanded' : ''}`} ref={detailsRef}>
+        <h3>{title}</h3>
         <p><FaCalendarAlt /> {date}</p>
         <p><FaMapMarkerAlt /> {location}</p>
         <p><FaCommentDots /> {description}</p>

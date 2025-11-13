@@ -16,7 +16,7 @@ export default function Home() {
         <header>
           <h1 className='intro-title'>Bienvenue dans la communauté des 5 villages</h1>
         </header>
-        <p>Choisissez une commune ou explorez le SIVOS et l'agenda intercommunal proposés.</p>
+        <h2 className='sub-title'>Choisissez une commune ou explorez le SIVOS et l'agenda intercommunal proposés.</h2>
 
 
         {/* Section des communes avec titre clair */}
@@ -42,7 +42,7 @@ export default function Home() {
 
         <section className='section-index-sivos'>
           <div className="paragraph-index">
-            <h2><Link href="/sivos">Découvrez le SIVOS</Link></h2>
+            <h2><Link className='nav-link' href="/sivos">Découvrez le SIVOS</Link></h2>
             <p>Informations et services scolaires pour les 5 villages.</p>
           </div>
           <Image
@@ -65,7 +65,7 @@ export default function Home() {
             priority
           />
           <div className="paragraph-index">
-            <h2><Link href="/agenda">Agenda des 5 villages</Link></h2>
+            <h2><Link className='nav-link' href="/agenda">Agenda des 5 villages</Link></h2>
 
             <p>Consultez les événements à venir dans notre communauté.</p>
           </div>

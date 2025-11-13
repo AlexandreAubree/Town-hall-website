@@ -67,9 +67,9 @@ export default function AuzouvilleSurSaane() {
           <h2>Actualités</h2>
           <EventCarousel events={events} />
         </section>
-
+<h2>Mairie</h2>
         <section className='card-infos-mairie'>
-          <h2>Mairie</h2>
+          
           {/* === Image mairie === */}
           <Image
             src="/mairie_auzouville_sur_saane.jpg"
@@ -95,12 +95,12 @@ export default function AuzouvilleSurSaane() {
 
         {/* === Carte interactive === */}
         <section className='section-localisation'>
-          <h3>Localisation</h3>
-          <TownMapClient
-            name="Auzouville-sur-Saâne"
-            address="12 rue du centre"
-            position={[49.744, 0.936]} // Latitude, Longitude
-          />
+          <h3>Localisation</h3>          
+            <TownMapClient
+              name="Auzouville-sur-Saâne"
+              address="12 rue du centre"
+              position={[49.744, 0.936]} // Latitude, Longitude
+            />
         </section>
         <section className='paragraph'>
           <h3>À propos d'Auzouville-sur-Saâne</h3>
