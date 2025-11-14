@@ -1,0 +1,38 @@
+import { useEffect, useRef, useState } from 'react';
+import { FaCalendarAlt, FaMapMarkerAlt, FaCommentDots } from 'react-icons/fa';
+import { EventType } from './types';
+import Image from 'next/image';
+
+type Props = EventType;
+
+export default function EventCard({ title, image, date, location, description }: Props) {
+  const detailsRef = useRef<HTMLDivElement>(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  useEffect(() => {
+    const el = detailsRef.current;
+    if (el && el.scrollHeight > el.clientHeight) {
+      setIsOverflowing(true);
+    }
+  }, []);
+
+  return (
+    <div className='carousel'>
+     
+      <Image 
+      src={image} 
+      alt={title} 
+      className="event-carousel-image"
+      width={300}
+      height={200}
+      />
+      
+      <div className={`event-details ${isOverflowing ? 'expanded' : ''}`} ref={detailsRef}>
+        <h3>{title}</h3>
+        <p><FaCalendarAlt /> {date}</p>
+        <p><FaMapMarkerAlt /> {location}</p>
+        <p><FaCommentDots /> {description}</p>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus_cantines",
+  "info": {
+    "singularName": "menus-cantine",
+    "pluralName": "menus-cantines",
+    "displayName": "menus-cantine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

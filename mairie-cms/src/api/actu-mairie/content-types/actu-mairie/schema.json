@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actu_mairies",
+  "info": {
+    "singularName": "actu-mairie",
+    "pluralName": "actu-mairies",
+    "displayName": "Actu-mairie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "visible": {
+      "type": "boolean"
+    }
+  }
+}
