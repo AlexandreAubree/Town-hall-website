@@ -61,7 +61,6 @@ h1 {
   }
 @media (min-width: 640px) {
     h1 {
-      margin-bottom: 1rem;
       font-size: 1.5rem;
     }
   }
